@@ -110,8 +110,8 @@ curl http://localhost:5000/api/download/{task_id}/0 -o result.pdf
 
 | 文件类型	|支持格式	|支持方法| 特殊参数 | 
 |---|---|---|---|
-| PDF	|.pdf	|`mask`, `color`, `char`| `--color`可选`white, black, red, blue`; `--char`可任意自定义字符|
-| Image	|.jpg, .jpeg, .png, .bmp, .tiff	|`mask`, `color`, `char`|`--color`可选`white, black, red, blue`; `--char`可任意自定义字符|
+| PDF	|.pdf	|`mask`, `color`, `char`| `--color`可选`white, black, red, blue`;<br> `--char`可任意自定义字符。|
+| Image	|.jpg, .jpeg, .png, .bmp, .tiff	|`mask`, `color`, `char`|`--color`可选`white, black, red, blue`;<br> `--char`可任意自定义字符。|
 | Word	|.docx, .doc|	`fake`, `mask`, `encrypt`| `--key`,仅当method = encrypt需要，仅支持6位数字|
 | Excel	|.xlsx, .xls	|`fake`, `mask`, `encrypt`|`--key`,仅当method = encrypt需要，仅支持6位数字|
 | PPT	|.pptx, .ppt|	`mask`| 仅支持mask脱敏，用`*`代替|
@@ -155,6 +155,7 @@ docker run -p 5000:5000 \
 - 任务状态信息存储在内存中，可配置持久化存储
 
 - 支持文件大小限制和类型验证
+
 
 
 
