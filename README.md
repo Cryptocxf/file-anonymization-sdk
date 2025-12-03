@@ -1,4 +1,4 @@
-# File Anonymization SDK （文件脱敏SDK）
+# PriKit SDK （文件脱敏SDK）
 
 基于Presidio的多格式文件脱敏SDK，支持PDF、Word、Excel、图片、PPT文件的敏感信息脱敏处理。
 
@@ -16,14 +16,14 @@
 
 ### 2.1 基础安装
 ```bash
-pip install file-anonymization-sdk
+pip install PriKit
 ```
 
 ### 2.2 从源码安装
 ```bash
 # 1. 克隆仓库
-git clone https://github.com/Cryptocxf/file-anonymization-sdk.git
-cd file-anonymization-sdk
+git clone https://github.com/Cryptocxf/PriKit.git
+cd PriKit
 
 # 2. 安装依赖
 pip install -r requirements.txt
@@ -43,26 +43,26 @@ pip install -e .
 **方式一：命令行使用**
 ```bash
 # PDF脱敏
-file-anonymizer pdf document.pdf --method color --color white
+prikit pdf document.pdf --method color --color white
 
 # Word脱敏
-file-anonymizer word document.docx --method mask
+prikit word document.docx --method mask
 
 # Excel脱敏
-file-anonymizer excel data.xlsx --method fake
+prikit excel data.xlsx --method fake
 
 # 图片脱敏
-file-anonymizer image photo.jpg --method char --char "*"
+prikit image photo.jpg --method char --char "*"
 
 # PPT脱敏
-file-anonymizer ppt presentation.pptx
+prikit ppt presentation.pptx
 
 # 启动API服务器
-file-anonymizer api --host 0.0.0.0 --port 5000
+prikit api --host 0.0.0.0 --port 5000
 ```
 **方式二：python代码中使用**
 ```python
-from file_anonymizer_sdk import PDFAnonymizer
+from prikit import PDFAnonymizer
 
 # 创建脱敏器
 anonymizer = PDFAnonymizer(language='zh', verbose=True)
