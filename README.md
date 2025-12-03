@@ -2,6 +2,25 @@
 
 基于Presidio的多格式文件脱敏SDK，支持PDF、Word、Excel、图片、PPT文件的敏感信息脱敏处理。
 
+
+- 支持脱敏数据类别：
+
+| 字段            | 解释              |
+| ------------- | --------------- |
+| PERSON        | 姓名              |
+| LOCATION      | 地理位置            |
+| EMAIL_ADDRESS | 电子邮件地址          |
+| ID            | 身份证号            |
+| IP_ADDRESS    | IP地址（IPv4或IPv6） |
+| URL           | 网址              |
+| DATE_TIME     | 日期时间信息          |
+| NRP           | 国籍、宗教或政治团体      |
+| PHONE_NUMBER  | 电话号码            |
+| CREDIT_CARD   | 信用卡号码（12-19位数字） |
+| CRYPTO        | 加密货币钱包地址        |
+| IBAN_CODE     | 国际银行账户号码        |
+
+
 ## 1. 功能特性
 
 - **多格式支持**：PDF、Word、Excel、图片(JPG/PNG等)、PPT
@@ -155,6 +174,7 @@ docker run -p 5000:5000 \
 - 任务状态信息存储在内存中，可配置持久化存储
 
 - 支持文件大小限制和类型验证
+
 
 
 
